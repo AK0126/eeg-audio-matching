@@ -1,6 +1,6 @@
 # EEG-Audio Matching with Neural Networks
 
-Code used for 2024 Summer Applied Math REU project at the University of Maryland. Comments / descriptions written by Claude
+Code used for 2024 Summer Applied Math REU project at the University of Maryland. Comments / descriptions written by Claude. All code (Python) written by my team; no AI was used to "clean up the code."
 
 This project tackles a neural decoding problem: given an EEG recording of a subject listening to audio, and 5 audio candidates, identify which audio the subject was actually hearing. This is a 5-way ranking/classification task evaluated by whether the correct audio receives the highest predicted similarity score.
 
