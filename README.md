@@ -10,6 +10,9 @@ Three complementary approaches are implemented and compared: a raw signal baseli
 
 ## Highlighted Files
 
+### `GaborMLP.ipynb` / `RawSignalMLP.ipynb`
+Documented notebooks walking through each approach end-to-end, with markdown cells explaining the Gabor transform, dataset structure, architecture design choices, and training loop mechanics.
+
 ### `mlp_gabor_encoder.py`
 The most advanced training script. Implements contrastive learning using a siamese `GaborEncoder` architecture trained with InfoNCE loss. Rather than direct classification, the model learns an embedding space where EEG recordings and their matching audio are geometrically close. Evaluation includes top-K ranking accuracy across all 5 candidates.
 
@@ -21,9 +24,6 @@ Ensemble meta-learning: loads pre-trained base models (raw signal and Gabor-tran
 
 ### `nn_helpers.py`
 Custom loss functions and evaluation metrics. Includes a vectorized multi-class cross-entropy using a matrix multiply trick, an InfoNCE wrapper, and `test_match_encoder_topk()` for computing cumulative top-K ranking accuracy.
-
-### `GaborMLP.ipynb` / `RawSignalMLP.ipynb`
-Documented notebooks walking through each approach end-to-end, with markdown cells explaining the Gabor transform, dataset structure, architecture design choices, and training loop mechanics.
 
 ---
 
